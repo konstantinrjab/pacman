@@ -1,0 +1,29 @@
+//.food
+//  height: 4vw
+//  width: 4vw
+//  border-radius: 5px
+//  animation: food 1s infinite linear
+//  position: absolute
+//  right: 88vw
+//  top: 0
+//  bottom: 0
+//  margin: auto
+//  z-index: -5
+
+@keyframes food
+  0%
+    box-shadow: 10vw 0 0 0 white, 20vw 0 0 0 white, 30vw 0 0 0 white, 40vw 0 0 0 white, 50vw 0 0 0 white, 60vw 0 0 0 white, 70vw 0 0 0 white
+  100%
+    box-shadow: 0 0 0 0 white, 10vw 0 0 0 white, 20vw 0 0 0 white, 30vw 0 0 0 white, 40vw 0 0 0 white, 50vw 0 0 0 white, 60vw 0 0 0 white
+
+@keyframes eat_t
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(-35deg)
+
+@keyframes eat_b
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(35deg)

@@ -1,0 +1,19 @@
+.pacman
+  height: 20vh
+  width: 40vh
+  background-color: yellow
+  animation: infinite 0.3s linear
+  animation-direction: alternate
+  position: relative
+  &__container
+    margin-top: 10vh
+    margin-left: 5vw
+    position: relative
+
+.pacman__top
+  border-radius: 500px 500px 0 0
+  animation-name: eat_t
+
+.pacman__bot
+  border-radius: 0 0 500px 500px
+  animation-name: eat_b
