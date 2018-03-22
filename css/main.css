@@ -1,3 +1,23 @@
+@font-face {
+  font-family: sevenet;
+  src: url("../fonts/sevenet_7_cyr.ttf"); }
+h1 {
+  font-size: 8vh; }
+
+h2 {
+  text-transform: uppercase;
+  font-size: 7vh; }
+  h2:hover {
+    cursor: pointer; }
+
+body {
+  background-color: black;
+  font-family: sevenet, serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: grey;
+  text-shadow: -1px -1px 0 #C8C8C8, 1px -1px 0 #C8C8C8, -1px 1px 0 #C8C8C8, 1px 1px 0 #C8C8C8; }
+
 .eye {
   width: 3vw;
   height: 3vw;
@@ -16,42 +36,6 @@
       margin-right: -17px; }
     .eye__line_2 {
       transform: rotate(-45deg); }
-
-@keyframes food {
-  0% {
-    box-shadow: 10vw 0 0 0 white, 20vw 0 0 0 white, 30vw 0 0 0 white, 40vw 0 0 0 white, 50vw 0 0 0 white, 60vw 0 0 0 white, 70vw 0 0 0 white; }
-  100% {
-    box-shadow: 0 0 0 0 white, 10vw 0 0 0 white, 20vw 0 0 0 white, 30vw 0 0 0 white, 40vw 0 0 0 white, 50vw 0 0 0 white, 60vw 0 0 0 white; } }
-@keyframes eat_t {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(-35deg); } }
-@keyframes eat_b {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(35deg); } }
-@font-face {
-  font-family: sevenet;
-  src: url("../fonts/sevenet_7_cyr.ttf"); }
-h1 {
-  font-size: 8vh; }
-
-h2 {
-  text-transform: uppercase;
-  font-size: 7vh; }
-  h2:hover {
-    cursor: pointer; }
-
-body {
-  background-color: black;
-  font-family: sevenet;
-  text-transform: uppercase;
-  text-align: center;
-  color: grey;
-  text-shadow: -1px -1px 0 #C8C8C8, 1px -1px 0 #C8C8C8, -1px 1px 0 #C8C8C8, 1px 1px 0 #C8C8C8;
-  cursor: default; }
 
 .pacman {
   height: 20vh;
@@ -73,12 +57,19 @@ body {
   border-radius: 0 0 500px 500px;
   animation-name: eat_b; }
 
-h2 {
+@keyframes eat_t {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-35deg); } }
+@keyframes eat_b {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(35deg); } }
+.button__feed:hover {
   animation: flasher 0.5s infinite linear;
-  animation-fill-mode: backwards;
-  animation-play-state: paused; }
-  h2:hover {
-    animation-play-state: running; }
+  animation-fill-mode: backwards; }
 
 .food {
   height: 15vh;
@@ -115,7 +106,7 @@ h2 {
   0% {
     left: 70vw; }
   100% {
-    left: 0vw; } }
+    left: 0; } }
 @keyframes flasher {
   25% {
     color: #ffffff; }

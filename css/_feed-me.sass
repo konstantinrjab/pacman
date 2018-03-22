@@ -1,9 +1,7 @@
-h2
-  animation: flasher 0.5s infinite linear
-  animation-fill-mode: backwards
-  animation-play-state: paused
+.button__feed
   &:hover
-    animation-play-state: running
+    animation: flasher 0.5s infinite linear
+    animation-fill-mode: backwards
 
 .food
   height: 15vh
@@ -40,7 +38,7 @@ h2
   0%
     left: 70vw
   100%
-    left: 0vw
+    left: 0
 
 @keyframes flasher
   25%

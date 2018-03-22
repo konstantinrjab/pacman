@@ -1,5 +1,24 @@
-@import "_eye"
-@import "_eating"
-@import "_global"
-@import "_pacman"
-@import "_feed-me"
+@font-face
+  font-family: sevenet
+  src: url('../fonts/sevenet_7_cyr.ttf')
+
+h1
+  font-size: 8vh
+
+h2
+  text-transform: uppercase
+  font-size: 7vh
+  &:hover
+    cursor: pointer
+
+body
+  background-color: black
+  font-family: sevenet, serif
+  text-transform: uppercase
+  text-align: center
+  color: grey
+  text-shadow: -1px -1px 0 #C8C8C8, 1px -1px 0 #C8C8C8, -1px 1px 0 #C8C8C8, 1px 1px 0 #C8C8C8
+
+@import '_eye'
+@import '_pacman'
+@import '_feed-me'
