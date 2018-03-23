@@ -42,7 +42,7 @@ function eat_food(id_food) {
 
     //ghost check
     if (id_food % 10 !== random) {
-        notice.innerHTML = (id_food - ghosts_count) + " cakes are eaten";
+        notice.innerHTML = (id_food - ghosts_count) + " cakes were eaten";
     } else {
         var cry = document.createElement("div");
         cry.className = 'cry';
