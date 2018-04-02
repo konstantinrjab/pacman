@@ -46,13 +46,13 @@ function eat_food(id_food) {
     } else {
         var cry = document.createElement("div");
         cry.className = 'cry';
-        cry.setAttribute('id', 'cry');
+        cry.setAttribute('id', 'cry_' + id_food);
         cry.innerHTML = 'It\'s a ghost!';
         document.getElementById('cry__container').appendChild(cry);
-        setTimeout(delete_notice, 3000, 'cry');
+        setTimeout(delete_notice, 3000, 'cry_' + id_food);
     }
 
-    setTimeout(delete_notice, 1000, id_food);
+    setTimeout(delete_notice, 1000, 'notice_' + id_food);
     //display eye
     if (id_food % 10 === random) {
         eye_display(1);
@@ -76,8 +76,9 @@ function eat_food(id_food) {
     document.getElementById('pacman__container').style.marginLeft = marginLeft + "vw";
 }
 
-function delete_notice(id_food) {
-    document.getElementById('notice_' + id_food).parentNode.removeChild(document.getElementById('notice_' + id_food));
+function delete_notice(id) {
+    console.log(id);
+    document.getElementById(id).parentNode.removeChild(document.getElementById(id));
 }
 
 function eye_display(bool) {
