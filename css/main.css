@@ -3,10 +3,16 @@
   src: url("../fonts/sevenet_7_cyr.ttf"); }
 h1 {
   font-size: 8vh; }
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 8vw; } }
 
 h2 {
   text-transform: uppercase;
   font-size: 7vh; }
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 7vw; } }
   h2:hover {
     cursor: pointer; }
 
@@ -18,25 +24,6 @@ body {
   color: grey;
   text-shadow: -1px -1px 0 #C8C8C8, 1px -1px 0 #C8C8C8, -1px 1px 0 #C8C8C8, 1px 1px 0 #C8C8C8; }
 
-.eye {
-  width: 3vw;
-  height: 3vw;
-  float: right;
-  margin-top: 8vh;
-  margin-right: 8vh;
-  display: none; }
-  .eye__line {
-    width: 10px;
-    height: 50px;
-    background-color: black;
-    margin: 0;
-    display: inline-block; }
-    .eye__line_1 {
-      transform: rotate(45deg);
-      margin-right: -17px; }
-    .eye__line_2 {
-      transform: rotate(-45deg); }
-
 .pacman {
   height: 20vh;
   width: 40vh;
@@ -44,6 +31,10 @@ body {
   animation: infinite 0.3s linear;
   animation-direction: alternate;
   position: relative; }
+  @media (max-width: 576px) {
+    .pacman {
+      height: 15vw;
+      width: 30vw; } }
   .pacman__container {
     margin-top: 10vh;
     margin-left: 5vw;
@@ -56,6 +47,36 @@ body {
 .pacman__bot {
   border-radius: 0 0 500px 500px;
   animation-name: eat_b; }
+
+.eye {
+  width: 3vw;
+  height: 3vw;
+  float: right;
+  margin-top: 8vh;
+  margin-right: 8vh;
+  display: none; }
+  @media (max-width: 576px) {
+    .eye {
+      margin-top: 6vw;
+      margin-right: 6vw; } }
+  .eye__line {
+    width: 10px;
+    height: 50px;
+    background-color: black;
+    margin: 0;
+    display: inline-block; }
+    @media (max-width: 576px) {
+      .eye__line {
+        width: 5px;
+        height: 20px; } }
+    .eye__line_1 {
+      transform: rotate(45deg);
+      margin-right: -17px; }
+      @media (max-width: 576px) {
+        .eye__line_1 {
+          margin-right: -10px; } }
+    .eye__line_2 {
+      transform: rotate(-45deg); }
 
 @keyframes eat_t {
   from {
@@ -82,25 +103,39 @@ body {
   Animation-fill-mode: forwards;
   position: absolute; }
   .food__container {
-    width: 15vh;
-    height: 15vh;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 3vw;
     margin: auto; }
+  @media (max-width: 576px) {
+    .food {
+      width: 10vw;
+      height: 10vw; } }
   .food__cake {
-    background: url("../images/cake.png") no-repeat; }
+    background: url("../images/cake.png") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%; }
   .food__ghost {
-    background: url("../images/ghost.png") no-repeat; }
+    background: url("../images/ghost.png") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%; }
 
 .notice__num {
-  font-size: 10vh;
+  font-size: 8vh;
   animation: flasher_notice 0.9s; }
+  @media (max-width: 576px) {
+    .notice__num {
+      font-size: 8vw; } }
 
 .cry {
-  font-size: 25vh;
+  font-size: 15vh;
   animation: flasher 3s linear; }
+  @media (max-width: 576px) {
+    .cry {
+      font-size: 10vw; } }
 
 @keyframes shot {
   0% {
@@ -119,7 +154,7 @@ body {
     color: #C8C8C8; } }
 @keyframes flasher_notice {
   25% {
-    font-size: 10vh;
+    font-size: 10vw;
     color: #ffffff;
     transform: rotate(5deg); }
   50% {
@@ -127,10 +162,10 @@ body {
     transform: rotate(-5deg); }
   75% {
     color: #ff4500;
-    font-size: 7vh;
+    font-size: 7vw;
     transform: rotate(0deg); }
   100% {
     color: #C8C8C8;
-    font-size: 14vh; } }
+    font-size: 14vw; } }
 
 /*# sourceMappingURL=main.css.map */

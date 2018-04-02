@@ -5,6 +5,9 @@
   animation: infinite 0.3s linear
   animation-direction: alternate
   position: relative
+  @media (max-width: 576px)
+    height: 15vw
+    width: 30vw
   &__container
     margin-top: 10vh
     margin-left: 5vw
@@ -17,6 +20,34 @@
 .pacman__bot
   border-radius: 0 0 500px 500px
   animation-name: eat_b
+
+.eye
+  width: 3vw
+  height: 3vw
+  float: right
+  margin-top: 8vh
+  margin-right: 8vh
+  display: none
+  @media (max-width: 576px)
+    margin-top: 6vw
+    margin-right: 6vw
+  &__line
+    width: 10px
+    height: 50px
+    background-color: black
+    margin: 0
+    display: inline-block
+    @media (max-width: 576px)
+      width: 5px
+      height: 20px
+    &_1
+      transform: rotate(45deg)
+      margin-right: -17px
+      @media (max-width: 576px)
+        margin-right: -10px
+    &_2
+      transform: rotate(-45deg)
+
 
 @keyframes eat_t
   from

@@ -14,25 +14,36 @@
   Animation-fill-mode: forwards
   position: absolute
   &__container
-    width: 15vh
-    height: 15vh
     position: absolute
     top: 0
     bottom: 0
     left: 3vw
     margin: auto
+  @media (max-width: 576px)
+    width: 10vw
+    height: 10vw
   &__cake
     background: url("../images/cake.png") no-repeat
+    background-size: contain
+    width: 100%
+    height: 100%
   &__ghost
     background: url("../images/ghost.png") no-repeat
+    background-size: contain
+    width: 100%
+    height: 100%
 
 .notice__num
-  font-size: 10vh
+  font-size: 8vh
   animation: flasher_notice 0.9s
+  @media (max-width: 576px)
+    font-size: 8vw
 
 .cry
-  font-size: 25vh
+  font-size: 15vh
   animation: flasher 3s linear
+  @media (max-width: 576px)
+    font-size: 10vw
 
 @keyframes shot
   0%
@@ -53,7 +64,7 @@
 
 @keyframes flasher_notice
   25%
-    font-size: 10vh
+    font-size: 10vw
     color: #ffffff
     transform: rotate(5deg)
   50%
@@ -61,8 +72,8 @@
     transform: rotate(-5deg)
   75%
     color: #ff4500
-    font-size: 7vh
+    font-size: 7vw
     transform: rotate(0deg)
   100%
     color: #C8C8C8
-    font-size: 14vh
+    font-size: 14vw

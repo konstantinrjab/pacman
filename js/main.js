@@ -23,13 +23,13 @@ function feed() {
         getRandom(1, 9);
     }
 
-    food.setAttribute('id', counter.toString());
+    food.setAttribute('id', 'food_' + counter.toString());
     document.getElementById('food__container').appendChild(food);
     setTimeout(eat_food, 1000, counter, ghosts_count);
 }
 
 function eat_food(id_food) {
-    document.getElementById(id_food).parentNode.removeChild(document.getElementById(id_food));
+    document.getElementById('food_' + id_food).parentNode.removeChild(document.getElementById('food_' + id_food));
     audio_eat.currentTime = 0;
     audio_eat.play();
     console.log('omnomnom');
@@ -37,7 +37,7 @@ function eat_food(id_food) {
     //create notice
     var notice = document.createElement('div');
     notice.className = 'notice__num';
-    notice.setAttribute('id', id_food);
+    notice.setAttribute('id', 'notice_' + id_food);
     document.getElementById('notice__container').appendChild(notice);
 
     //ghost check
@@ -69,15 +69,15 @@ function eat_food(id_food) {
 
     //move pacman
     if (move_right) {
-        marginLeft = marginLeft + 10;
+        marginLeft = marginLeft + 8;
     } else {
-        marginLeft = marginLeft - 10;
+        marginLeft = marginLeft - 8;
     }
     document.getElementById('pacman__container').style.marginLeft = marginLeft + "vw";
 }
 
 function delete_notice(id_food) {
-    document.getElementById(id_food).parentNode.removeChild(document.getElementById(id_food));
+    document.getElementById('notice_' + id_food).parentNode.removeChild(document.getElementById('notice_' + id_food));
 }
 
 function eye_display(bool) {

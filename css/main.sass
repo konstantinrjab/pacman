@@ -4,10 +4,14 @@
 
 h1
   font-size: 8vh
+  @media (max-width: 576px)
+    font-size: 8vw
 
 h2
   text-transform: uppercase
   font-size: 7vh
+  @media (max-width: 576px)
+    font-size: 7vw
   &:hover
     cursor: pointer
 
@@ -19,6 +23,5 @@ body
   color: grey
   text-shadow: -1px -1px 0 #C8C8C8, 1px -1px 0 #C8C8C8, -1px 1px 0 #C8C8C8, 1px 1px 0 #C8C8C8
 
-@import '_eye'
 @import '_pacman'
 @import '_feed-me'
